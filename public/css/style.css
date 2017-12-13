@@ -30,6 +30,9 @@ nav.page-navigation a {
 
 }
 
+h1 {
+	text-align: center;
+}
 
 .jumbotron h1 {
 	padding-top: 120px;
@@ -56,17 +59,17 @@ nav.page-navigation a {
 
 .col-md-7.col-md-push-5 {
 	text-align: right;
+	float: right;
 }
+/*
+.img-thumbnail {
+	;
+}*/
 
 .img-circle {
     border-radius: 50%;
 
 }
-/*
-.thumbnail {
-	height: 150px;
-	width: 150px;
-}*/
 
 .col-md-3 {
 	height: 300px;
