@@ -16,11 +16,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="site-navigation page-navigation">
     <ul class="navbar-nav">
       <!-- <li><a href="#top">Home</a></li> -->
-      <li><a href="#section-one">About</a></li>
-      <li><a href="#section-two">Meet the Team</a></li>
-      <li><a href="#section-three">Testimonials</a></li>
+      <li class="nav-item"><a href="#section-one">About</a></li> |
+      <li class="nav-item"><a href="#section-two">Meet the Team</a></li> |
+      <li class="nav-item"><a href="#section-three">Testimonials</a></li> |
       <li><a href="#section-four">Sign-Up!</a></li>
       <!-- <li class="nav-item active">
         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
@@ -32,6 +33,7 @@
         <a class="nav-link" href="#">Rated</a> -->
     </ul>
   </div>
+</nav>
 </nav>
   <div class="background-image"></div>
   <div class="jumbotron">
@@ -169,8 +171,10 @@
     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
-<div id="section-four"
-<div id="mc_embed_signup" class="col-md-12 text-right">
+
+<br><br>
+<div id="section-four">
+<div id="mc_embed_signup" class="col-md-12 text-center">
 <form action="https://lezlinkapp.us11.list-manage.com/subscribe/post?u=8e60ed6057c40e709c0893a9b&amp;id=cc374273f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
     <h2>Sign Up!</h2>
@@ -196,6 +200,7 @@
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
+</div>
 </div>
 </div>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
