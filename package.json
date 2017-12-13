@@ -1,0 +1,26 @@
+{
+  "name": "rateyourroommate",
+  "version": "1.0.0",
+  "description": "This is for Project #3. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshowell/RateYourRoommate.git"
+  },
+  "author": "Perla Showell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pshowell/RateYourRoommate/issues"
+  },
+  "homepage": "https://github.com/pshowell/RateYourRoommate#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.28.1"
+  }
+}
