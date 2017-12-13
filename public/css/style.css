@@ -63,7 +63,7 @@ button.edit {
 
 }
 
-h1 {
+.jumbotron h1 {
 	top: 30px;
 	font-weight: bold;
 	color: white;
