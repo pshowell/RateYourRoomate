@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+body,h1,h2,div,form,input,label,h3,a,h4,th {
+  font-family: 'Dosis', sans-serif;
+  color: #005580;
+}
+body, html {
+  min-height: 100%;
+  transition: background-color .5s;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-color: grey;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.w3-panel {
+  margin: 25px;
+  text-align: left;
+  background-color: lightgray;
+  padding: 25px 25px 25px 25px;
+}
+
+.w3-bar-block{
+  text-align: left;
+}
+
+.showNutrition{
+  color: chocolate;
+  font-size: small;
+  text-align: justify;
+}
+
+footer{
+  background: lightgray;
+  position: fixed;
+  display: block;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  margin-top: 5%;
+  bottom:0;
+}
+footer a, footer ul {
+  margin: 2px;
+}
+
+div#bloodhound {
+  margin-bottom: 25%;
+}
+
+#register{
+  margin-bottom: 9%;
+}
+
+.w3-jumbo{
+  opacity: .65;
+  background-color: lightgray;
+  text-align: center;
+  margin: 0px;
+  /* position: fixed; */
+  /* top:0; */
+  /* width: 100%; */
+}
+
+
+#loginBox{
+  margin-bottom: 1%;
+}
+
+.w3-button {
+  margin: 15px;
+}
+
+#dashboard_hamburger{
+  position: absolute;
+  left: 2%;
+  height: 60px;
+  width: 100px;
+  margin: 0px;
+  padding: 0px;
+  top: 4px;
+}
+
+#trackName, #subCat{
+  padding: 5px;
+  margin-bottom: 15px;
+  color: #005580;
+  width: 100%;
+}
+
+#logo{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-top: 5%
+}
+
+/* #myDashboard{
+  margin-bottom: 10%;
+} */
+
+#foodInput, #log, #register, #displayLogConfirmation,#logConfirmation{
+  width: 50%;
+  position: sticky;
+  left: 25%;
+}
+
+.w3-main, .main-content {
+  margin-bottom: 35%;
+}
+
+.index-header{
+  margin-top: 0px;
+  /* top:0;
+  width:100%;
+  position:fixed;
+  margin-bottom: 10%; */
+}
+#mySidebar {
+  /* height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0; */
+  overflow-x: hidden;
+}
+
+.w3-modal {
+  display:none;
+}
+
+#modalData {
+  width: 100%;
+}
+.w3-modal-content {
+width: 50%;
+}
+.modalBtn {
+  z-index: 10;
+}
+.index-main {
+  margin-bottom:35%;
+}
+/* .bgimg {
+  margin-bottom:30%;
+} */
