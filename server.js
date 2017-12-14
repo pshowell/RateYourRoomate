@@ -11,7 +11,7 @@ var application = require('./routes/application');
 // var routes = require("./routes");
 
 SALT_WORK_FACTOR = 12;
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 var db = require("./models");
 var app = express();
 
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 //settings from express-session
 app.use(session({
-    secret: 'yumyumkeepsyoulogged',
+    secret: 'rated',
     resave: false,
     saveUninitialized: false}))
 app.use(passport.initialize())
@@ -38,9 +38,10 @@ app.set("view engine", "handlebars");
 
 // app.use(routes);
 require("./routes/authenticate.js")(app);
-require("./routes/api-food-entries.js")(app);
+
+
 require("./routes/api-user.js")(app);
-require("./routes/api-dashboard-routes.js")(app);
+
 require("./routes/public-routes.js")(app);
 
 function errorHandler (err, req, res, next) {

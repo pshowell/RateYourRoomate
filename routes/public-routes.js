@@ -20,13 +20,13 @@ module.exports = function(app) {
   //all our images
   app.get("/images/:image", function(req, res) {
     if (req.params.image === "giphy") {
-      res.sendFile(path.join(__dirname, "../public/assets/images/giphy.gif"));
+      res.sendFile(path.join(__dirname, "../public/assets/images/women_among_clothes.jpg"));
     }
-    if (req.params.image === "star") {
-      res.sendFile(path.join(__dirname, "../public/assets/images/star.png"));
-    }
+    // if (req.params.image === "star") {
+    //   res.sendFile(path.join(__dirname, "../public/assets/images/star.png"));
+    // }
     if (req.params.image === "yyLogo") {
-      res.sendFile(path.join(__dirname, "../public/assets/images/hamster.svg"));
+      res.sendFile(path.join(__dirname, "../public/assets/images/roomie.jpg"));
     }
   });
 };
