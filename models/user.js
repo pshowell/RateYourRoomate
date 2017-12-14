@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
         username: {type: DataTypes.STRING, unique: true, allowNull: false, validate: {notEmpty: true}},
         password: {type: DataTypes.STRING, allowNull: false, validate: {notEmpty: true}},
-
+        // first_name: {type: DataTypes.STRING},
+        // last_name: {type: DataTypes.STRING}
     },	{
 		dialect: 'mysql'
 	});
@@ -21,10 +22,10 @@ module.exports = function(sequelize, DataTypes) {
             }
         })
     };
-    User.associate = function(models) {
-        User.hasMany(models.rating);
-        User.hasMany(models.roommate);
-    };
+    // User.associate = function(models) {
+    //     User.hasMany(models.log);
+    //     User.hasMany(models.goal);
+    // };
     //encryption occurs here before password logged to database
     User.hook('beforeCreate', function(user, fn){
         var salt = bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt){

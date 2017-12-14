@@ -8,18 +8,16 @@ module.exports = function(app) {
     })
 
     app.post('/authenticate',
-    passport.authenticate('local'), function (req, res) {
-
-      console.log('greetings')
-      res.render('index')
-
-    //   console.log('hello')
-    // successRedirect: '/login',
-    // failureRedirect: '/'
+    passport.authenticate('local',{
+    successRedirect: '/login',
+    failureRedirect: '/'
     })
-
-
+    )
+    app.get('/login', function(req,res) {
+        res.render("login")
+    })
     app.get('/logout', application.destroySession)
+
     app.get('/signup', function(req,res) {
         res.render("signup")
     })
