@@ -18,12 +18,16 @@ nav.page-navigation a {
 	position: relative;
 	background-image: url("./images/pexels-photo-58592.jpeg");
 	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 }
 
 .background-image {
   height: 500px;
   position: absolute;
+	
+
 }
 
 
