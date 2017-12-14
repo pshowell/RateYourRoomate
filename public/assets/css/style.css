@@ -1,7 +1,7 @@
 
 nav.navbar-expand-lg.navbar-light {
 	width: 100%;
-	position: fixed;
+	/*position: fixed;*/
 
 }
 nav.page-navigation a {
@@ -14,21 +14,19 @@ nav.page-navigation a {
 	font-style: italic;
 }
 
-
-
 .jumbotron {
-	background-image: url("https://symbi.imgix.net/symbi/women_among_clothes.jpg");
-  height: 500px;
+	position: relative;
+	background-image: url("./images/pexels-photo-58592.jpeg");
+	height: 500px;
+
 }
+
 .background-image {
-  background-repeat: no-repeat;
-	background-position: center;
-	background-size; 100%;
   height: 500px;
   position: absolute;
-
-
 }
+
+
 
 h1 {
 	text-align: center;
@@ -69,6 +67,11 @@ h1 {
 .img-circle {
     border-radius: 50%;
 
+}
+
+.img-thumbnail.img-responsive {
+	height: 210px;
+	width: 310px:
 }
 
 .col-md-3 {
