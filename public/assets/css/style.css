@@ -105,6 +105,8 @@ body {
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
+	background-color: white;
+
 }
 #header {
    background:#ff0;
@@ -117,9 +119,11 @@ body,h1,h2,div,form,input,label,h3,a,h4,th {
   font-family: 'Dosis', sans-serif;
   color: #005580;
 }
+
 body, html {
   min-height: 100%;
   transition: background-color .5s;
+	background-color: blue;
 }
 
 
@@ -148,7 +152,7 @@ footer {
   margin-left: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 85%;
+  width: 84%;
   margin-top: 5%;
   bottom:0;
 	text-align: center;
