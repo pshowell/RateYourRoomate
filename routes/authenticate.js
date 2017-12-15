@@ -20,6 +20,12 @@ module.exports = function(app) {
 
     app.get('/signup', function(req,res) {
         res.render("signup")
+
+    })
+
+        app.get('/authors', function(req,res) {
+        res.render("authors")
+
     })
 
     app.post('/register', function(req, res){
