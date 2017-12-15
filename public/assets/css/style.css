@@ -26,10 +26,8 @@ nav.page-navigation a {
 .background-image {
   height: 500px;
   position: absolute;
-	
 
 }
-
 
 
 h1 {
@@ -42,6 +40,7 @@ h1 {
 	color: white;
   text-align: center;
 	font-size: 30px;
+	text-shadow:  2px 2px 4px #000000;
 
 }
 
@@ -50,6 +49,7 @@ h1 {
 	font-weight: bold;
 	color: white;
   text-align: center;
+	text-shadow:  2px 2px 4px #000000;
 
 }
 
@@ -71,6 +71,7 @@ h1 {
 .img-circle {
     border-radius: 50%;
 
+
 }
 
 .img-thumbnail.img-responsive {
@@ -87,6 +88,15 @@ h1 {
 .col-md-12.text-center {
 	padding-top: 30px;
 	padding-bottom: 50px;
+}
+
+p {
+	text-align: center;
+
+}
+
+p.lead {
+	text-align: inherit;
 }
 
 html,
