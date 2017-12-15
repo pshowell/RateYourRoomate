@@ -21,6 +21,7 @@ nav.page-navigation a {
 	height: 500px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	margin-bottom: 8px;
 
 }
 
@@ -74,6 +75,7 @@ h1 {
 	width: 310px:
 }
 
+
 .col-md-3 {
 	height: 300px;
 	padding-top: 20px;
@@ -81,7 +83,7 @@ h1 {
 }
 
 .col-md-12.text-center {
-	padding-top: 30px;
+	padding-top: 0px;
 	padding-bottom: 50px;
 }
 
@@ -106,6 +108,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 	background-color: white;
+	padding-top: 0px;
 
 }
 #header {
@@ -123,7 +126,7 @@ body,h1,h2,div,form,input,label,h3,a,h4,th {
 body, html {
   min-height: 100%;
   transition: background-color .5s;
-	background-color: blue;
+	background-image: url(./images/brickwall.png);
 }
 
 
@@ -146,7 +149,7 @@ body, html {
 
 footer {
   background: lightgray;
-  position: fixed;
+
   /*display: block;*/
 	margin-right: 10px;
   margin-left: 10px;
