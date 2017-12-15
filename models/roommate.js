@@ -6,6 +6,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
+        last_initial: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         state: {
             type: DataTypes.STRING,
         }
