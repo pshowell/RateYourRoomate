@@ -10,6 +10,17 @@ nav.page-navigation a {
 		color: black;
 }
 
+
+.btn-outline-primary {
+	border-color: #17a2b8;
+	color: #17a2b8;
+}
+
+.btn-outline-primary:hover {
+	background-color: #17a2b8;
+	border-color: #17a2b8;;
+
+}
 .blockquote p {
 	font-style: italic;
 }
@@ -33,6 +44,35 @@ nav.page-navigation a {
 
 h1 {
 	text-align: center;
+}
+
+.page-header h1 {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	/*text-shadow:  1px 1px 2px #000000;*/
+}
+
+.team h1 {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+
+
+}
+
+.testimonials h1 {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+}
+
+.about {
+	background-color: inherit;
+
 }
 
 .jumbotron h1 {
