@@ -436,3 +436,12 @@ body.home .navbar {
     }
 }
 /*espie stylesheets ends here*/
+.form-group {
+	padding-left 15px;
+	padding-right: 15px;
+	text-align: right;
+}
+label {
+	display: block;
+	float: left;
+}
