@@ -1,280 +1,356 @@
 {{> nav}}
 
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="#">RateYourRoommate</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-  <nav class="site-navigation page-navigation">
-  <ul class="navbar-nav"> -->
-    <!-- <li><a href="#top">Home</a></li> -->
-    <!-- <li class="nav-item"><a href="#section-one">About</a></li> |
-    <li class="nav-item"><a href="#section-two">Meet the Team</a></li> |
-    <li class="nav-item"><a href="#section-three">Testimonials</a></li> |
-    <li><a href="#section-four">Sign-Up!</a></li>
+<main id="HomeMain">
 
-  </ul>
-</div>
-</nav>
-</nav> -->
+          <!-- <div class="background-image responsive"></div> -->
+               <div class="jumbotron">
+                    <h1>Find and Rate a Roommate!</h1>
+                    <h2>Never have a bad roommate experience again.</h2>
 
-<div class="background-image responsive"></div>
-<div class="jumbotron">
 
-<h1>Rate Your Roommate,</h1>
-<h2>Never have a bad roommate experience again.</h2>
-<hr class="my-4">
-</div>
-</div>
-<div class="container">
-<div class="row">
-  <div class="col-sm-12 text-center">
-    <hr style="border : none;">
-<div id="icons" class="row text-center">
-  <div class="col-sm-4">
-    <i class="fa fa-user fa-3x">
-    </i>
-  <i class="fa fa-long-arrow-right fa-3x"></i>
-  <i class="fa fa-user fa-3x">
-  </i>
-  <h2>roomie to roomie</h2>
-  <p class="userTypeDescription">Looking for a roommate to go apartment-hunting with?</p>
-</div>
-<div class="col-sm-4">
-  <i class="fa fa-user fa-3x">
-  </i>
-<i class="fa fa-long-arrow-right fa-3x"></i>
-<i class="fa fa-user fa-3x">
-</i>
-<h2>tbd roomie to roomie</h2>
-<p class="userTypeDescription">Potential roomie looks at your ratings.</p>
-</div>
-<div class="col-sm-4">
-  <i class="fa fa-user fa-3x">
-  </i>
-  <i class="fa fa-long-arrow-right fa-3x"></i>
-  <i class="fa fa-user fa-3x">
-  </i>
-    <h2>roomie to tbd roomie</h2>
-  <p class="userTypeDescription">roomie reads about potential roomie's interests and habits.</p>
- </div>
-</div>
-</div>
-</div>
+                  </div>
+                  <!-- Start of sign up form (espie) sign up modal -->
+                     <button  type="button" class="btn btn-info btn-lg cta-btn" data-toggle="modal" data-target="#myModal">Not a member? Sign up here</button>
 
-<hr>
-<br>
-<div class= "about">
-<h1>About Us:</h1>
-<br>
-<div id="section-one" class ="row featurette">
-<div class="col-md-7">
-  <h2 class="featurette-heading">Roommate Matching</h2>
-  <p class="lead">See potential roommates ratings and we'll let you know then there's a mutual match. No more wasting time on roommates that would never work out.</p>
-</div>
-    <div class="col-md-5 text-center">
-      <img class="img-thumbnail img-responsive" src="./assets/images/dislike.jpg">
-    </div>
-  </div>
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Join us</h4>
+                          </div>
+                          <div class="modal-body">
 
-  <hr>
-  <br>
-<div class ="row featurette">
-  <div class="col-md col-md-pull-7 text-center">
-    <img class="img-thumbnail img-responsive" src="./assets/images/rommate.jpg">
-      <div class="col-md-7 col-md-push-5">
-        <h2 class="featurette-heading">Complete Information</h2>
-          <p class="lead">Rate Your Roommate gathers all the right information right in front of you. No need to prune potential roommates based on one-line responses.</p>
-        </div>
-    </div>
-</div>
-  <hr>
-  <br>
-  <div class ="row featurette">
-    <div class="col-md-7 col-md-push-5 text-left">
-        <h2 class="featurette-heading">Love Where you Live.</h2>
-          <p class="lead">A happy home is where three things line up: you, your roommate, and your apartment. We help you focus on living situations where  the <strong> roommate(s) </strong> fit.</p>
-        </div>
-            <div class="col-md col-md-pull-7 text-center">
-              <img class="img-thumbnail img-responsive" src="./assets/images/roomies2.jpg">
-    </div>
-  </div>
-</div>
-<hr>
-<br><br>
+                      <div id="SignUpForm">
+                        <!-- <div class="col-md-4 order-md-1 text-center form"> -->
+                          <h2 class="mb-3">Find a Roommate!</h2>
+                          <h5>Sign Up</h5>
+                          <form id="signup" name="signup" method="post" action="/signup">
+                            <div class="form-group">
+                              <label for="email" class="col-form-label">Email</label>
+                              <input type="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                              <label for="name" class="col-form-label">Name</label>
+                              <input type="text" class="form-control" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                              <label for="password" class="col-form-label">Password</label>
+                              <input class="form-control" name="password" type="password" placeholder="Password" />
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="location" class="col-form-label">Location</label>
+                              <!-- <input type="text" class="form-control" name="location" placeholder="City"> -->
 
-<div class="blog">
-  <h1>Blog</h1>
-<div id="section-two" class="row">
-<div class="container blog">
-  <div class="row">
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-default" href="/cms">New Post</a>
+                                    <select name="location" class="form-control">
+                                      <option name="location" selected>Select One</option>
+                                      <option name="location" value="Arlington, Va">Arlington, Va</option>
+                                      <option name="location" value="Washington, DC">Washington, DC</option>
+                                      <option name="location" value="Baltimore, Md.">Baltimore, Md.</option>
+                                      <option name="location" value="Baltimore, Md.">New York, NY.</option>
+
+                                      <option name="location" value="Los Angeles, Ca">Los Angeles, Ca.</option>
+                                      <option name="location" value="Seattle, Wa">Seattle, Wa.</option>
+                                      <option name="location" value="Silcon Valley, Ca.">Silicon Valley, Ca.</option>
+                                    </select>
+
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label for="gender" class="col-form-label">Gender</label>
+                                <select name="gender" class="form-control">
+                                  <option name="gender" selected>Select One</option>
+                                  <option name="gender" value="male">Male</option>
+                                  <option name="gender" value="female">Female</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-md-2">
+                                <label for="age" class="col-form-label">Age</label>
+                                <input class="form-control" name="age" type="number" />
+
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="bio">Bio</label>
+                              <textarea class="form-control" name="bio" type="text" rows="3">{{userBio}}</textarea>
+                            </div>
+                            <input type="checkbox" checked="checked"> Remember me
+                                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                            <div class="form-group text-right">
+                              <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+        <!-- </div> -->
+      </div>
+
+
+        <hr class="my-4">
     </div>
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-default" href="/manage">Manage Authors</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 blog-container">
-    </div>
-  </div>
 </div>
 
-<div class="container">
-  <div class="row top-30">
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-default" href="/blog">Go to Blog</a>
-    </div>
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-default" href="/authors">Add A Rating</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <form id="cms">
-        <div class="form-group">
-          <label for="title">Title:</label>
-          <input placeholder="Post Title" type="text" class="form-control" id="title">
-          <br />
-          <label for="body">Body:</label>
-          <textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
-          <div class="form-group">
-            <label for="category">Select Author:</label>
-            <select class="form-control" id="author">
-            </select>
+          <!-- (espie)end of sign up form -->
+
+      <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 text-center">
+                      <hr style="border : none;">
+                        <div id="icons" class="row text-center">
+                          <div class="col-sm-4">
+
+                            <i class="fa fa-user fa-3x"></i>
+                            <i class="fa fa-long-arrow-right fa-3x"></i>
+                            <i class="fa fa-user fa-3x"></i>
+
+                              <h2>roomie to roomie</h2>
+                              <p class="userTypeDescription">Looking for a roommate to go apartment-hunting with?</p>
+                          </div>
+
+                          <div class="col-sm-4">
+
+                            <i class="fa fa-user fa-3x"></i>
+                            <i class="fa fa-long-arrow-right fa-3x"></i>
+                            <i class="fa fa-user fa-3x"></i>
+
+                              <h2>tbd roomie to roomie</h2>
+                              <p class="userTypeDescription">Potential roomie looks at your ratings.</p>
+                          </div>
+
+                          <div class="col-sm-4">
+
+                            <i class="fa fa-user fa-3x"></i>
+                            <i class="fa fa-long-arrow-right fa-3x"></i>
+                            <i class="fa fa-user fa-3x"></i>
+                              <h2>roomie to tbd roomie</h2>
+                              <p class="userTypeDescription">roomie reads about potential roomie's interests and habits.</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+          <hr>
+          <br>
+          <div class= "about">
+          <h1>About Us:</h1>
+          <br>
+          <div id="section-one" class ="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Roommate Matching</h2>
+            <p class="lead">See potential roommates ratings and we'll let you know then there's a mutual match. No more wasting time on roommates that would never work out.</p>
           </div>
-          <br />
-          <button type="submit" class="btn btn-success submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-<br>
+              <div class="col-md-5 text-center">
+                <img class="img-thumbnail img-responsive" src="/assets/img/dislike.jpg">
+              </div>
+            </div>
 
-</div>
-</div>
-<br>
-<hr>
-<br>
-<div class="team">
-  <h1>Meet the Team!</h1>
-<div id="section-three" class="row">
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <a href="./assets/img/perla.jpg">
-            <img class="img-circle" src="./assets/images/perla.jpg" alt="Perla" style="width:85%">
-            <div class="caption">
-              <p>Perla Showell</p>
+            <hr>
+            <br>
+          <div class ="row featurette">
+            <div class="col-md col-md-pull-7 text-center">
+              <img class="img-thumbnail img-responsive" src="/assets/img/rommate.jpg">
+                <div class="col-md-7 col-md-push-5">
+                  <h2 class="featurette-heading">Complete Information</h2>
+                    <p class="lead">Rate Your Roommate gathers all the right information right in front of you. No need to prune potential roommates based on one-line responses.</p>
+                  </div>
+              </div>
+          </div>
+            <hr>
+            <br>
+            <div class ="row featurette">
+              <div class="col-md-7 col-md-push-5 text-left">
+                  <h2 class="featurette-heading">Love Where you Live.</h2>
+                    <p class="lead">A happy home is where three things line up: you, your roommate, and your apartment. We help you focus on living situations where  the <strong> roommate(s) </strong> fit.</p>
+                  </div>
+                      <div class="col-md col-md-pull-7 text-center">
+                        <img class="img-thumbnail img-responsive" src="/assets/img/roomies2.jpg">
+              </div>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <a href="./assets/img/brooke.jpg">
-            <img class="img-circle" src="./assets/images/brooke.jpg" alt="Brooke" style="width:85%">
-            <div class="caption">
-              <p>Brooke Baker</p>
+          </div>
+          <hr>
+          <br><br>
+<!--
+          <div class="blog">
+            <h1>Blog</h1>
+          <div id="section-two" class="row">
+          <div class="container blog">
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <a class="btn btn-default" href="/cms">New Post</a>
+              </div>
+              <div class="col-md-2 col-sm-2">
+                <a class="btn btn-default" href="/authors">Manage Authors</a>
+              </div>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <a href="/w3images/fjords.jpg">
-            <img class="img-circle" src="./assets/images/es.jpeg" alt="Esperanza" style="width:85%">
-            <div class="caption">
-              <p>Esperanza Freeman</p>
+            <div class="row">
+              <div class="col-md-12 blog-container">
+              </div>
             </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <a href="./assets/img/haley.png">
-            <img class="img-circle" src="./assets/images/haley2.png" alt="Haley" style="width:85%">
-            <div class="caption">
-              <p>Haley Lock</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-<br><br>
-<hr>
-<br>
-<div class="testimonials">
-  <h1>Testimonials</h1>
-    <div id="section-four">
-<br><br>
-<div class="card-columns">
-  <div class="card p-5">
-    <blockquote class="blockquote mb-0 card-body">
-      <p> I found the most laid back roommate I've ever had using Rate Your Roommate. - John D., Chicago.</p>
-    <!-- <footer class="blockquote-footer">
-      <small class="text-muted">
-      John Doe <cite title="Source Title">from Chicago</cite>
-      </small>
-    </footer> -->
-  </blockquote>
-</div>
-<div class="card p-3">
-  <blockquote class="blockquote mb-0 card-body">
-    <p> Rate Your Rooommate could not be more easy to use! - Jack F., NYC.</p>
-    <!-- <footer class="blockquote-footer">
-      <small class="text-muted">
-      John Doe <cite title="Source Title">from Chicago</cite>
-      </small>
-    </footer> -->
-  </blockquote>
-</div>
-<div class="card p-3">
-  <blockquote class="blockquote mb-0 card-body">
-    <p>Rate Your Rooommate helped me narrow down my roommate search. - Chris S., Dallas.</p>
-    <!-- <footer class="blockquote-footer">
-      <small class="text-muted">
-      John Doe <cite title="Source Title">from Chicago</cite>
-      </small>
-    </footer> -->
-  </blockquote>
-</div>
-<div class="card p-5">
-  <blockquote class="blockquote mb-0 card-body">
-    <p> I was able to track down a suitable roommate in a matter of days, instead of weeks. Rate Your Rooommate is so easy to use. - John M., Seattle.</p>
-  <!-- <footer class="blockquote-footer">
-    <small class="text-muted">
-    John Doe <cite title="Source Title">from Chicago</cite>
-    </small>
-  </footer> -->
-</blockquote>
-</div>
-<div class="card p-5">
-  <blockquote class="blockquote mb-0 card-body">
-    <p> You rock, Rate Your Rooommate. I have the best roommate in all of Miami. - Andi L., Miami.</p>
-  <!-- <footer class="blockquote-footer">
-    <small class="text-muted">
-    John Doe <cite title="Source Title">from Chicago</cite>
-    </small>
-  </footer> -->
-</blockquote>
-</div>
-<div class="card p-3">
-  <blockquote class="blockquote mb-0 card-body">
-    <p> I'm no longer miserable having a roommate. Thanks, Rate Your Rooommate, you're is a game changer. - Jen F., Boston.</p>
-    <!-- <footer class="blockquote-footer">
-      <small class="text-muted">
-      John Doe <cite title="Source Title">from Chicago</cite>
-      </small>
-    </footer> -->
-  </blockquote>
-</div>
-<br><br><br>
-</div>
-</div>
-</div>
+          </div>
 
-{{> footer}}
+          <div class="container">
+            <div class="row top-30">
+              <div class="col-md-2 col-sm-2">
+                <a class="btn btn-default" href="/blog">Go to Blog</a>
+              </div>
+              <div class="col-md-2 col-sm-2">
+                <a class="btn btn-default" href="/authors">Add A Rating</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <form id="cms">
+                  <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input placeholder="Post Title" type="text" class="form-control" id="title">
+                    <br />
+                    <label for="body">Body:</label>
+                    <textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
+                    <div class="form-group">
+                      <label for="category">Select Author:</label>
+                      <select class="form-control" id="author">
+                      </select>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-success submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <br> -->
+
+          </div>
+          </div>
+          <br>
+          <hr>
+          <br>
+          <div class="team">
+            <h1>Meet the Team!</h1>
+          <div id="section-three" class="row">
+                <div class="col-md-3">
+                  <div class="thumbnail">
+                    <a href="./assets/img/perla.jpg">
+                      <img class="img-circle" src="/assets/img/perla.jpg" alt="Perla" style="width:85%">
+                      <div class="caption">
+                        <p>Perla Showell</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="thumbnail">
+                    <a href="./assets/img/brooke.jpg">
+                      <img class="img-circle" src="/assets/img/brooke.jpg" alt="Brooke" style="width:85%">
+                      <div class="caption">
+                        <p>Brooke Baker</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="thumbnail">
+                    <a href="/assets/img/es.jpeg">
+                      <img class="img-circle" src="/assets/img/es.jpeg" alt="Esperanza" style="width:85%">
+                      <div class="caption">
+                        <p>Esperanza Freeman</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="thumbnail">
+                    <a href="./assets/img/haley.png">
+                      <img class="img-circle" src="/assets/img/haley2.png" alt="Haley" style="width:85%">
+                      <div class="caption">
+                        <p>Haley Lock</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <br><br>
+          <hr>
+          <br>
+          <div class="testimonials">
+            <h1>Testimonials</h1>
+              <div id="section-four">
+          <br><br>
+          <div class="card-columns">
+            <div class="card p-5">
+              <blockquote class="blockquote mb-0 card-body">
+                <p> I found the most laid back roommate I've ever had using Rate Your Roommate. - John D., Chicago.</p>
+              <!-- <footer class="blockquote-footer">
+                <small class="text-muted">
+                John Doe <cite title="Source Title">from Chicago</cite>
+                </small>
+              </footer> -->
+            </blockquote>
+          </div>
+          <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p> Rate Your Rooommate could not be more easy to use! - Jack F., NYC.</p>
+              <!-- <footer class="blockquote-footer">
+                <small class="text-muted">
+                John Doe <cite title="Source Title">from Chicago</cite>
+                </small>
+              </footer> -->
+            </blockquote>
+          </div>
+          <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>Rate Your Rooommate helped me narrow down my roommate search. - Chris S., Dallas.</p>
+              <!-- <footer class="blockquote-footer">
+                <small class="text-muted">
+                John Doe <cite title="Source Title">from Chicago</cite>
+                </small>
+              </footer> -->
+            </blockquote>
+          </div>
+          <div class="card p-5">
+            <blockquote class="blockquote mb-0 card-body">
+              <p> I was able to track down a suitable roommate in a matter of days, instead of weeks. Rate Your Rooommate is so easy to use. - John M., Seattle.</p>
+            <!-- <footer class="blockquote-footer">
+              <small class="text-muted">
+              John Doe <cite title="Source Title">from Chicago</cite>
+              </small>
+            </footer> -->
+          </blockquote>
+          </div>
+          <div class="card p-5">
+            <blockquote class="blockquote mb-0 card-body">
+              <p> You rock, Rate Your Rooommate. I have the best roommate in all of Miami. - Andi L., Miami.</p>
+            <!-- <footer class="blockquote-footer">
+              <small class="text-muted">
+              John Doe <cite title="Source Title">from Chicago</cite>
+              </small>
+            </footer> -->
+          </blockquote>
+          </div>
+          <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p> I'm no longer miserable having a roommate. Thanks, Rate Your Rooommate, you're is a game changer. - Jen F., Boston.</p>
+              <!-- <footer class="blockquote-footer">
+                <small class="text-muted">
+                John Doe <cite title="Source Title">from Chicago</cite>
+                </small>
+              </footer> -->
+            </blockquote>
+          </div>
+          <br><br><br>
+          </div>
+          </div>
+          </div>
+
+
+
+</main>

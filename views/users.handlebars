@@ -1,0 +1,53 @@
+
+{{> nav}}
+<main id="HomeMain">
+          <div class="background-image responsive"></div>
+               <div class="jumbotron">
+                    <h1>Find and Rate a Roommate!</h1>
+                    <h2>Never have a bad roommate experience again.</h2>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                  {{> profileSidebar}}
+               </div>
+              </div>
+                   <section class="row">
+                      {{#each users}}
+                      <div class="col-sm-12 col-md-4 col-lg-3">
+                          <div class="card w-100">
+                              <a href="users/{{id}}">
+                                  <img class="card-img-top" src="{{picture}}" alt="{{name}}'s picture">
+                              </a>
+                              <div class="card-body">
+                                  <h4 class="card-title">{{name}}</h4>
+                                  <p class="card-text">{{age}}</p>
+                                  <p class="card-text">{{location}}</p>
+                                  <a href="/users/{{id}}" class="btn btn-primary">View Profile</a>
+
+
+                        <!-- for star rating -->
+                              <div class="rating">
+                                <p>Rating</p>
+                                  <label>
+                                  <input type="radio" name="rating" value="5" title="5 stars"> 5
+                                  </label>
+                                  <label>
+                                  <input type="radio" name="rating" value="4" title="4 stars"> 4
+                                  </label>
+                                  <label>
+                                  <input type="radio" name="rating" value="3" title="3 stars"> 3
+                                  </label>
+                                  <label>
+                                  <input type="radio" name="rating" value="2" title="2 stars"> 2
+                                  </label>
+                                  <label>
+                                  <input type="radio" name="rating" value="1" title="1 star"> 1
+                                  </label>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      {{/each}}
+                   </section>
+</main>

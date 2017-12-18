@@ -1,0 +1,45 @@
+{{> nav}}
+
+<main id="HomeMain">
+
+          <div class="background-image responsive"></div>
+               <div class="jumbotron">
+                    <h1>Find and Rate a Roommate!</h1>
+                    <h2>Never have a bad roommate experience again.</h2>
+
+
+                  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+          {{> profileNav }}
+          {{> profileSidebar}}
+        </div>
+        <div class="col-8">
+          Welcome!
+
+            <div class="mb-3">
+                <h2>Blog</h2>
+                <form action="/api/posts" method="post">
+                    <div class="form-group">
+                        <textarea class="form-control" id="PostBody" rows="3" name="body"></textarea>
+                    </div>
+                    <input type="hidden" value="{{userId}}" id="UserId" />
+                    <div class="form-group text-right">
+                        <button id="SubmitPost" type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </form>
+            </div>
+            <div id="Posts">
+                {{#each posts}}
+                <div class="card mb-3 w-100">
+                    <div class="card-body text-secondary">
+                        <p class="card-text">{{body}}</p>
+                    </div>
+                    <div class="card-footer bg-transparent"><small>{{createdAt}}</small></div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

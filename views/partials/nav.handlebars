@@ -1,26 +1,79 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="#"><img src="./assets/images/RYRlogo.png"></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-  <nav class="site-navigation page-navigation">
-  <ul class="navbar-nav">
-    <li><a href="#top">Home</a></li>|
-     <li class="nav-item"><a href="#section-one">About</a></li> |
-    <li class="nav-item"><a href="#section-two">Meet the Team</a></li> |
-    <li class="nav-item"><a href="#section-three">Testimonials</a></li> |
-    <li><a onclick="window.location.href='/signup'">Sign-Up!</a></li>
-  </ul>
-</div>
+  <div class="container">
+    {{#if isUser}}
 
-    <ul class="nav navbar-nav navbar-right">
+    <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="#"><img src="/assets/img/RYRlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <nav class="site-navigation page-navigation">
+        <ul class="navbar-nav">
+          <li><a href="#top">Home</a></li>|
+           <li class="nav-item"><a href="#section-one">About</a></li> |
+          <li class="nav-item"><a href="#section-two">Meet the Team</a></li> |
+          <li class="nav-item"><a href="#section-three">Testimonials</a></li> |
+          <!-- <li><a onclick="window.location.href='/signup'">Sign-Up!</a></li> -->
+        </ul>
+      </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-     <!-- <li><a onclick="window.location.href='/signup'"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-     <li><a onclick="window.location.href='/login'"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-   </ul>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ml-auto justify-content-center">
+        <ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ml-auto justify-content-center">
+        <!-- <a id="find-roommates" class="nav-item nav-link btn btn-outline-info navBar-link navBar-rml" href="/roommates" role="button">Find Pets</a> -->
+        <a id="find-users" class="nav-item nav-link btn btn-outline-info navBar-link" href="/users" role="button">Find a Roommie</a>
+        <a id="my-profile" class="nav-item nav-link btn btn-outline-info navBar-link" href="/profile" role="button">My Profile</a>
+        <a class="nav-item nav-link btn btn-outline-info navBar-link" href="/logout" role="button">Logout</a>
+      </div>
 
+          <ul>
+      </div>
+    </div>
+    {{else}}
+    <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="#"><img src="/assets/img/RYRlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <nav class="site-navigation page-navigation">
+        <ul class="navbar-nav">
+          <li><a href="#top">Home</a></li>|
+           <li class="nav-item"><a href="#section-one">About</a></li> |
+          <li class="nav-item"><a href="#section-two">Meet the Team</a></li> |
+          <li class="nav-item"><a href="#section-three">Testimonials</a></li> |
+          <!-- <li><a onclick="window.location.href='/signup'">Sign-Up!</a></li> -->
+        </ul>
+      </div>
 
+<ul class="nav navbar-nav navbar-right">
 
-</nav>
+          <li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <form class="form-inline ml-auto" id="signin" name="signin" method="post" action="/signin">
+                <input class="form-control mr-sm-2 mb-1 mt-1" name="email" type="text" placeholder="Email" />
+                <input class="form-control mr-sm-2" name="password" type="password" placeholder="Password" />
+                <button class="btn btn-outline-primary my-2 my-sm-0 mx-auto" type="submit">Login</button>
+              </form>
+            </div>
+          </li>
+                   <!-- <li><a onclick="window.location.href='/signup'"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+      <li>
+<!-- sign up -->
+
+<!-- end sign up -->
+      </li>
+
+</ul>
+    {{/if}}
+  </div>
 </nav>
