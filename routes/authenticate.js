@@ -28,6 +28,12 @@ module.exports = function(app) {
 
     })
 
+
+        app.get('/manage', function(req,res) {
+        res.render("manage")
+
+    })
+
     app.post('/register', function(req, res){
         db.User.findOne({where: {username: req.username}}).then(function (user){
             if(!user) {
