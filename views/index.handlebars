@@ -3,27 +3,27 @@
 <main id="HomeMain">
 
           <!-- <div class="background-image responsive"></div> -->
-               <div class="jumbotron">
+               <div id="top" class="jumbotron">
                     <h1>Find and Rate a Roommate!</h1>
                     <h2>Never have a bad roommate experience again.</h2>
-
+                    <br>
+                    <button type="button" class="btn btn-info btn-lg cta-btn animated infinate headShake" data-toggle="modal" data-target="#myModal">Not a member? Sign up here</button>
 
                   </div>
                   <!-- Start of sign up form (espie) sign up modal -->
-                     <button  type="button" class="btn btn-info btn-lg cta-btn" data-toggle="modal" data-target="#myModal">Not a member? Sign up here</button>
+
 
                     <div class="modal fade" id="myModal" role="dialog">
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Join us</h4>
                           </div>
                           <div class="modal-body">
 
                       <div id="SignUpForm">
                         <!-- <div class="col-md-4 order-md-1 text-center form"> -->
-                          <h2 class="mb-3">Find a Roommate!</h2>
+                          <h2 class="mb-3">Rate Your Roommate!</h2>
                           <h5>Sign Up</h5>
                           <form id="signup" name="signup" method="post" action="/signup">
                             <div class="form-group">
@@ -90,13 +90,6 @@
               </div>
             </div>
 
-        <!-- </div> -->
-      </div>
-
-
-        <hr class="my-4">
-    </div>
-</div>
 
           <!-- (espie)end of sign up form -->
 
@@ -139,9 +132,14 @@
 
           <hr>
           <br>
+
+          <div class="page-header">
+            <h1>About Us:</h1>
+        </div>
+        <br>
           <div class= "about">
-          <h1>About Us:</h1>
-          <br>
+          <!-- <h1>About Us:</h1>
+          <br> -->
           <div id="section-one" class ="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Roommate Matching</h2>
@@ -176,16 +174,18 @@
             </div>
           </div>
           <hr>
-          <!-- <hr> -->
+
           <br>
           <div class="team">
             <h1>Meet the Team!</h1>
-          <div id="section-three" class="row">
+            <br>
+          <div id="section-two" class="row">
                 <div class="col-md-3">
                   <div class="thumbnail">
-                    <a href="./assets/img/perla.jpg">
-                      <img class="img-circle" src="./assets/img/perla.jpg" alt="Perla" style="width:85%">
+                    <!-- <a href="./assets/img/perla.jpg"> -->
+                      <img class="img-circle" src="./assets/img/perla.jpg"  style="width:85%">
                       <div class="caption">
+                        <br>
                         <p>Perla Showell</p>
                       </div>
                     </a>
@@ -193,9 +193,10 @@
                 </div>
                 <div class="col-md-3">
                   <div class="thumbnail">
-                    <a href="./assets/img/brooke.jpg">
-                      <img class="img-circle" src="./assets/img/brooke.jpg" alt="Brooke" style="width:85%">
+                    <!-- <a href="./assets/img/brooke.jpg"> -->
+                      <img class="img-circle" src="./assets/img/brooke.jpg"  style="width:85%">
                       <div class="caption">
+                        <br>
                         <p>Brooke Baker</p>
                       </div>
                     </a>
@@ -203,9 +204,10 @@
                 </div>
                 <div class="col-md-3">
                   <div class="thumbnail">
-                    <a href="/w3images/fjords.jpg">
-                      <img class="img-circle" src="./assets/img/es.jpeg" alt="Esperanza" style="width:85%">
+                    <!-- <a href="/w3images/fjords.jpg"> -->
+                      <img class="img-circle" src="./assets/img/es.jpeg"  style="width:85%">
                       <div class="caption">
+                        <br>
                         <p>Esperanza Freeman</p>
                       </div>
                     </a>
@@ -213,9 +215,10 @@
                 </div>
                 <div class="col-md-3">
                   <div class="thumbnail">
-                    <a href="./assets/img/haley.png">
-                      <img class="img-circle" src="./assets/img/haley2.png" alt="Haley" style="width:85%">
+                    <!-- <a href="./assets/img/haley.png"> -->
+                      <img class="img-circle" src="./assets/img/haley2.png"  style="width:85%">
                       <div class="caption">
+                        <br>
                         <p>Haley Lock</p>
                       </div>
                     </a>
@@ -227,68 +230,44 @@
           <hr>
           <br>
           <div class="testimonials">
-            <h1>Testimonials</h1>
-              <div id="section-four">
+            <h1>Testimonials:</h1>
+              <div id="section-three">
           <br><br>
           <div class="card-columns">
             <div class="card p-5">
               <blockquote class="blockquote mb-0 card-body">
                 <p> I found the most laid back roommate I've ever had using Rate Your Roommate. - John D., Chicago.</p>
-              <!-- <footer class="blockquote-footer">
-                <small class="text-muted">
-                John Doe <cite title="Source Title">from Chicago</cite>
-                </small>
-              </footer> -->
+
             </blockquote>
           </div>
           <div class="card p-3">
             <blockquote class="blockquote mb-0 card-body">
               <p> Rate Your Rooommate could not be more easy to use! - Jack F., NYC.</p>
-              <!-- <footer class="blockquote-footer">
-                <small class="text-muted">
-                John Doe <cite title="Source Title">from Chicago</cite>
-                </small>
-              </footer> -->
+
             </blockquote>
           </div>
           <div class="card p-3">
             <blockquote class="blockquote mb-0 card-body">
               <p>Rate Your Rooommate helped me narrow down my roommate search. - Chris S., Dallas.</p>
-              <!-- <footer class="blockquote-footer">
-                <small class="text-muted">
-                John Doe <cite title="Source Title">from Chicago</cite>
-                </small>
-              </footer> -->
+
             </blockquote>
           </div>
           <div class="card p-5">
             <blockquote class="blockquote mb-0 card-body">
               <p> I was able to track down a suitable roommate in a matter of days, instead of weeks. Rate Your Rooommate is so easy to use. - John M., Seattle.</p>
-            <!-- <footer class="blockquote-footer">
-              <small class="text-muted">
-              John Doe <cite title="Source Title">from Chicago</cite>
-              </small>
-            </footer> -->
+
           </blockquote>
           </div>
           <div class="card p-5">
             <blockquote class="blockquote mb-0 card-body">
               <p> You rock, Rate Your Rooommate. I have the best roommate in all of Miami. - Andi L., Miami.</p>
-            <!-- <footer class="blockquote-footer">
-              <small class="text-muted">
-              John Doe <cite title="Source Title">from Chicago</cite>
-              </small>
-            </footer> -->
+
           </blockquote>
           </div>
           <div class="card p-3">
             <blockquote class="blockquote mb-0 card-body">
               <p> I'm no longer miserable having a roommate. Thanks, Rate Your Rooommate, you're is a game changer. - Jen F., Boston.</p>
-              <!-- <footer class="blockquote-footer">
-                <small class="text-muted">
-                John Doe <cite title="Source Title">from Chicago</cite>
-                </small>
-              </footer> -->
+
             </blockquote>
           </div>
           <br><br><br>

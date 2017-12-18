@@ -10,6 +10,17 @@ nav.page-navigation a {
 		color: black;
 }
 
+
+.btn-outline-primary {
+	border-color: #17a2b8;
+	color: #17a2b8;
+}
+
+.btn-outline-primary:hover {
+	background-color: #17a2b8;
+	border-color: #17a2b8;;
+
+}
 .blockquote p {
 	font-style: italic;
 }
@@ -34,6 +45,39 @@ nav.page-navigation a {
 h1 {
 	text-align: center;
 }
+
+.page-header h1 {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	/*text-shadow:  1px 1px 2px #000000;*/
+}
+
+.team h1 {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+
+
+}
+
+.testimonials h1 {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+}
+
+.card.p-3 {
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card.p-5 {
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .jumbotron h1 {
 	padding-top: 160px;
@@ -67,11 +111,16 @@ h1 {
 
 .img-circle {
     border-radius: 50%;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
 }
 
 .img-thumbnail.img-responsive {
 	height: 210px;
-	width: 310px:
+	width: 310px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 
@@ -79,6 +128,7 @@ h1 {
 	height: 300px;
 	padding-top: 20px;
 	padding-bottom: 200px;
+	text-align: center;
 }
 
 .col-md-12.text-center {
@@ -88,7 +138,11 @@ h1 {
 
 p {
 	text-align: center;
-
+	font-style: normal;
+	font-size: 20px;
+	text-decoration: none;
+	top: auto;
+	bottom: auto;
 }
 
 p.lead {
@@ -177,9 +231,7 @@ div#bloodhound {
   background-color: lightgray;
   text-align: center;
   margin: 0px;
-  /* position: fixed; */
-  /* top:0; */
-  /* width: 100%; */
+
 }
 
 
@@ -215,9 +267,7 @@ div#bloodhound {
   margin-top: 5%
 }
 
-/* #myDashboard{
-  margin-bottom: 10%;
-} */
+
 
 #foodInput, #log, #register, #displayLogConfirmation,#logConfirmation{
   width: 50%;
@@ -231,18 +281,10 @@ div#bloodhound {
 
 .index-header{
   margin-top: 0px;
-  /* top:0;
-  width:100%;
-  position:fixed;
-  margin-bottom: 10%; */
+
 }
 #mySidebar {
-  /* height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top:0;
-  left:0; */
+
   overflow-x: hidden;
 }
 
@@ -283,17 +325,7 @@ footer {
 }
 
 }
-/*.welcome{
-	margin-left:20%;
-}*/
 
-/*.btn:hover {
-    cursor: pointer;
-}*/
-
-/*.btn.disabled:hover {
-    cursor: default;
-}*/
 
 .card {
     margin: 0 0 10px 0;
@@ -319,61 +351,6 @@ footer {
     margin-bottom: 0;
 }
 
-/*.navbar {
-    margin-bottom: 20px;
-}
-
-.nav-link:hover {
-    cursor: pointer;
-}
-
-.roommate-masthead {
-    padding: 0
-}
-
-.form {
-    padding: 100px
-}
-
-.nav-link:hover {
-    cursor: pointer;
-}*/
-
-/**Home styles**/
-/*html, body.home {
-    height: 100%;
-    position: relative;
-}*/
-
-/*body.home .navbar {
-    margin-bottom: 0;
-}
-
-body.home .navbar {
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    right: 0;
-    width: 100%;
-}*/
-
-/*#HomeMain {
-    height: 100%;
-    position: relative;
-}/*
-
-
-
-/*#ImageContainer {
-    background-image: url('..//images/pexels-photo-5859.jpeg');
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    display: table-cell;
-    height: 100%;
-    width: 65%;
-}*/
 
 #SignUpForm {
     display: table-cell;
@@ -403,13 +380,6 @@ body.home .navbar {
         display: block;
     }
 
-    /*#ImageContainer {
-        background-size: cover;
-        background-position: center;
-        display: block;
-        height: 600px;
-        width: 100%;
-    }*/
 
     #SignUpForm {
         display: block;
@@ -436,3 +406,12 @@ body.home .navbar {
     }
 }
 /*espie stylesheets ends here*/
+.form-group {
+	padding-left 15px;
+	padding-right: 15px;
+	text-align: right;
+}
+label {
+	display: block;
+	float: left;
+}
