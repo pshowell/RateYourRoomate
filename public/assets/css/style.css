@@ -110,6 +110,7 @@ h1 {
 .col-md-7.col-md-push-5 {
 	text-align: right;
 	float: right;
+
 }
 
 .img-circle {
@@ -125,10 +126,7 @@ h1 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-img {
-	display: block;
-	align-items: center;
-}
+
 
 .col-md-3 {
 	height: 300px;
@@ -147,8 +145,7 @@ p {
 	font-style: normal;
 	font-size: 20px;
 	text-decoration: none;
-	top: auto;
-	bottom: auto;
+
 }
 
 p.lead {
