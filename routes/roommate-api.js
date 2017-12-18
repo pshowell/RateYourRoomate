@@ -47,11 +47,7 @@ module.exports = function (app) {
         }
 
         var roommatePicture = req.files.roommatePicture;
-<<<<<<< Updated upstream
-        var roommateId = req.body.rmId;
-=======
         var rmId = req.body.id;
->>>>>>> Stashed changes
         console.log(rmId);
         var imgPath = '/RoommateImages/' + rmId + '_' + req.body.rmname + '.jpeg';
 
