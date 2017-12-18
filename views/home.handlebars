@@ -20,7 +20,7 @@
             Welcome!
           </div>
             <div class="mb-3">
-                <h2>Blog</h2>
+                <h2>Blog:</h2>
                 <form action="/api/posts" method="post">
                     <div class="form-group">
                         <textarea class="form-control" id="PostBody" rows="3" name="body"></textarea>
@@ -37,8 +37,12 @@
                     <div class="card-body text-secondary">
                         <p class="card-text">{{body}}</p>
                     </div>
-                    <div class="card-footer bg-transparent"><small>{{createdAt}}</small></div>
-                </div>
+                      <div class="card-footer bg-transparent"><small>{{createdAt}}</small></div>
+                    </div>
+                    <div class="form-group text-right">
+                        <button id="DeletePost" mehtod="delete" type="Delete" class="btn btn-primary">Delete</button>
+                        <button id="UpdatePost" type="Update" class="btn btn-primary">Update</button>
+                    </div>
                 {{/each}}
             </div>
         </div>

@@ -140,7 +140,7 @@ $(document).ready(function () {
         });
 
     });
-
+    
     $('.delete-roommate').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();

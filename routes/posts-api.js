@@ -32,10 +32,10 @@ module.exports = function(app){
     app.delete('/api/posts', function(req, res){
         models.Posts.destroy({
             where: {
-                userId: req.user.id
+              UserId: req.body.id
             }
         }).then(function(data){
-            res.json(data);
+            res.send('success');
         });
     });
 }

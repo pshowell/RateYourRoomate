@@ -442,3 +442,8 @@ label {
 	display: block;
 	float: left;
 }
+
+.rounded {
+	display: block;
+	align-items: center;
+}
