@@ -6,20 +6,21 @@ module.exports = function (app) {
     //Post new with picture
     app.post('/api/roommates', function (req, res) {
       var imgPath;
-      var rmId = req.body.rmId;
+      var rmId = req.body.id;
 
 
-        if (req.files.roommatePicture)
+        if (req.files.roommatePicture){
             return res.status(400).send('No files were uploaded.');
             var roommatePicture = req.files.roommatePicture;
-              var userId = req.user.rmId;
-            var imgPath = '/RoommateImages/' + rmId + '_' + req.body.rmname + '.jpeg';
+            var rmId = req.user.id;
+            var imgPath = '/RoommateImages/' +  rmId+ '_' + req.body.rmname + '.jpeg';
 
           roommatePicture.mv(path.join(__dirname, '../public' + imgPath), function (err) {
                 if (err) {
                     return res.status(500).send(err);
                 }
             });
+
         } else {
             imgPath = 'https://api.adorable.io/avatars/285/' + req.body.rmname + '.png'
         }
@@ -46,9 +47,13 @@ module.exports = function (app) {
         }
 
         var roommatePicture = req.files.roommatePicture;
+<<<<<<< Updated upstream
         var roommateId = req.body.rmId;
+=======
+        var rmId = req.body.id;
+>>>>>>> Stashed changes
         console.log(rmId);
-        var imgPath = '/RoommateImages/' + req.user.id + '_' + req.body.rmname + '.jpeg';
+        var imgPath = '/RoommateImages/' + rmId + '_' + req.body.rmname + '.jpeg';
 
         roommatePicture.mv(path.join(__dirname, '../public' + imgPath), function (err) {
             if (err) {
@@ -56,10 +61,10 @@ module.exports = function (app) {
             }
 
             models.Roommates.update({
-                picture: imgPath
+                rmpicture: imgPath
             }, {
                 where: {
-                    id: roommateId
+                    id: rmId
                 }
             });
             res.redirect('/profile/view-roommates');
@@ -101,10 +106,8 @@ module.exports = function (app) {
             where: {
                 id: req.params.rmId * 1
             }
-        }).then(data => {
-            res.json(data);
-
-
+        }).then(function (dbRoommates) {
+            res.redirect('/profile/view-roommates');
         });
     });
 }

@@ -7,7 +7,7 @@
             {{> profileNav}}
             <div class="row">
                 <div class="col">
-                    <h2 class="text-left" style="display: inline-block">My Roommates</h2>
+                    <h2  href="/roommates/{{id}}" class="text-left" style="display: inline-block">My Roommates</h2>
                     <button type="button" class="btn btn-primary roommate-margin-b-sm roommate-margin-l-sm" data-toggle="modal" data-target="#add-roommate">Add a Roommate</button>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                         </a>
                         <div class="card-body">
                             <h4 class="card-title text-center">{{name}}</h4>
-                            <a href="/roommates/{{id}}" class="btn btn-primary mb-1">View Profile</a>
+                            <a href="/api/roommate/{{id}}" class="btn btn-primary mb-1">View Profile</a>
                             <button type="button" class="btn btn-info mb-1 edit-roommate" data-toggle="modal" data-target="#edit-roommate" data-id="{{id}}">Edit Profile</button>
                             <form>
                                 <a href="#" class="btn btn-danger delete-roommate" data-id="{{id}}">Delete Roommate</a>
@@ -111,7 +111,7 @@
     </div>
 </div>
 
-<!-- Edit Pet Modal -->
+<!-- Edit  Modal -->
 <div class="modal fade" id="edit-roommate" tabindex="-1" role="dialog" aria-labelledby="edit-roommateLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -132,7 +132,7 @@
 
                     </div>
                 </form>
-
+<!-- edit roommate -->
                 <form id="edit-roommate-form" name="edit-roommate" method="post" action="/api/update-roommate">
                     <div class="form-row">
                         <div class="form-group col-6">

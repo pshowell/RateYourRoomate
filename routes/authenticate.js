@@ -14,21 +14,27 @@ module.exports = function (app, passport) {
           res.render("home")
       })
 
-      app.get('/roommates', function(req,res) {
+    app.get('/roommates', function(req,res) {
             res.render("roommates")
       })
     app.get('/roommate', function(req,res) {
                   res.render("roommate")
 
         })
-        app.get('/dashboard', function(req,res) {
+    app.get('/dashboard', function(req,res) {
                       res.render("dashboard")
 
             })
 
     app.post('/signin', passport.authenticate('local-signin', {
         successRedirect: '/profile',
-        failureRedirect: '/'
+        if (err) {
+            return res.status(500).send(err);
+
+            failureRedirect: '/'
+        }
+
+
     }));
 
     function isLoggedIn(req, res, next) {
