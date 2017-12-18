@@ -107,11 +107,13 @@ h1 {
 
 .img-circle {
     border-radius: 50%;
+
 }
 
 .img-thumbnail.img-responsive {
 	height: 210px;
-	width: 310px:
+	width: 310px;
+
 }
 
 
@@ -119,6 +121,7 @@ h1 {
 	height: 300px;
 	padding-top: 20px;
 	padding-bottom: 200px;
+	text-align: center;
 }
 
 .col-md-12.text-center {
@@ -128,7 +131,9 @@ h1 {
 
 p {
 	text-align: center;
-
+	font-style: normal;
+	font-size: 20px;
+	text-decoration: none;
 }
 
 p.lead {
