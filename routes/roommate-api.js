@@ -45,7 +45,7 @@ module.exports = function (app) {
             return res.status(400).send('No files were uploaded');
         }
 
-        var roommatePicture = req.files.rmpicture;
+        var roommatePicture = req.files.roommatePicture;
         var roommateId = req.body.rmId;
         console.log(rmId);
         var imgPath = '/RoommateImages/' + req.user.id + '_' + req.body.rmname + '.jpeg';
