@@ -185,7 +185,10 @@ body, html {
 	background-image: url(/assets/img/brickwall.png);
 }
 
-
+img {
+	display: block;
+	align-items: center;
+}
 
 .w3-panel {
   margin: 25px;
@@ -411,8 +414,10 @@ footer {
 /*espie stylesheets ends here*/
 .form-group {
 	padding-left: 4px;
-	text-align: right;
-	padding-right: 4px;
+	text-align: center;
+ 	display: block;
+ 	align-items: center;
+ 	justify-content: center;
 }
 label {
 	display: block;
