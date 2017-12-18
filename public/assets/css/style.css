@@ -59,10 +59,13 @@ h1 {
 	color: #17a2b8;
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
-
-
 }
-
+.welcome {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+}
 .testimonials h1 {
 	text-align: center;
 	color: #17a2b8;
@@ -122,7 +125,10 @@ h1 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-
+img {
+	display: block;
+	align-items: center;
+}
 
 .col-md-3 {
 	height: 300px;
@@ -407,9 +413,9 @@ footer {
 }
 /*espie stylesheets ends here*/
 .form-group {
-	padding-left 15px;
-	padding-right: 15px;
+	padding-left: 4px;
 	text-align: right;
+	padding-right: 4px;
 }
 label {
 	display: block;
