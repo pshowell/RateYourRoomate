@@ -60,12 +60,7 @@ h1 {
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
 }
-.welcome {
-	text-align: center;
-	color: #17a2b8;
-	font-family: 'Lobster', cursive;
-	font-size: 50px;
-}
+
 .testimonials h1 {
 	text-align: center;
 	color: #17a2b8;
@@ -186,7 +181,6 @@ body, html {
 }
 
 
-
 .w3-panel {
   margin: 25px;
   text-align: left;
@@ -234,9 +228,7 @@ div#bloodhound {
   background-color: lightgray;
   text-align: center;
   margin: 0px;
-
 }
-
 
 #loginBox{
   margin-bottom: 1%;
@@ -269,8 +261,6 @@ div#bloodhound {
   width: 50px;
   margin-top: 5%
 }
-
-
 
 #foodInput, #log, #register, #displayLogConfirmation,#logConfirmation{
   width: 50%;
@@ -315,6 +305,17 @@ footer {
 	padding-right: 10px;
 
 }
+
+/*home.handlebars stylesheet starts here */
+
+.welcome {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+}
+
+/*home.handlebars stylesheet ends here*/
 
 /*espie stylesheets start here*/
 
