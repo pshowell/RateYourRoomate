@@ -1,10 +1,6 @@
-
-
-
-
 nav.navbar-expand-lg.navbar-light {
 	width: 100%;
-	position: fixed;
+	/*position: fixed;*/
 
 }
 nav.page-navigation a {
@@ -13,26 +9,27 @@ nav.page-navigation a {
     width: 80%;
 		color: black;
 }
+
 .blockquote p {
 	font-style: italic;
 }
 
-
 .jumbotron {
-	background-image: url("https://symbi.imgix.net/symbi/women_among_clothes.jpg");
-  height: 500px;
-
+	position: relative;
+	background-image: url(/assets/img/pexels-photo-58592.jpeg);
+	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 8px;
 
 }
+
 .background-image {
-  background-repeat: no-repeat;
-	background-position: center;
-	background-size; 100%;
   height: 500px;
   position: absolute;
 
-
 }
+
 
 h1 {
 	text-align: center;
@@ -44,6 +41,7 @@ h1 {
 	color: white;
   text-align: center;
 	font-size: 30px;
+	text-shadow:  2px 2px 4px #000000;
 
 }
 
@@ -52,6 +50,7 @@ h1 {
 	font-weight: bold;
 	color: white;
   text-align: center;
+	text-shadow:  2px 2px 4px #000000;
 
 }
 
@@ -65,15 +64,16 @@ h1 {
 	text-align: right;
 	float: right;
 }
-/*
-.img-thumbnail {
-	;
-}*/
 
 .img-circle {
     border-radius: 50%;
-
 }
+
+.img-thumbnail.img-responsive {
+	height: 210px;
+	width: 310px:
+}
+
 
 .col-md-3 {
 	height: 300px;
@@ -82,8 +82,17 @@ h1 {
 }
 
 .col-md-12.text-center {
-	padding-top: 30px;
+	padding-top: 0px;
 	padding-bottom: 50px;
+}
+
+p {
+	text-align: center;
+
+}
+
+p.lead {
+	text-align: inherit;
 }
 
 html,
@@ -97,17 +106,169 @@ body {
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
+	background-color: white;
+	padding-top: 0px;
+
 }
 #header {
    background:#ff0;
    padding:10px;
 }
+* {
+  box-sizing: border-box;
+}
+body,h1,h2,div,form,input,label,h3,a,h4,th {
+  font-family: 'Dosis', sans-serif;
+  color: #005580;
+}
+
+body, html {
+  min-height: 100%;
+  transition: background-color .5s;
+	background-image: url(/assets/img/brickwall.png);
+}
 
 
-.jumbotron  {
-    font-weight: bold;
-    color: #0e0707;
-    text-align: center;
+
+.w3-panel {
+  margin: 25px;
+  text-align: left;
+  background-color: lightgray;
+  padding: 25px 25px 25px 25px;
+}
+
+.w3-bar-block{
+  text-align: left;
+}
+
+.showNutrition{
+  color: chocolate;
+  font-size: small;
+  text-align: justify;
+}
+
+footer {
+  background: lightgray;
+
+  /*display: block;*/
+	margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 84%;
+  margin-top: 5%;
+  bottom:0;
+	text-align: center;
+}
+footer a, footer ul {
+  margin: 2px;
+}
+
+div#bloodhound {
+  margin-bottom: 25%;
+}
+
+#register{
+  margin-bottom: 9%;
+}
+
+.w3-jumbo{
+  opacity: .65;
+  background-color: lightgray;
+  text-align: center;
+  margin: 0px;
+  /* position: fixed; */
+  /* top:0; */
+  /* width: 100%; */
+}
+
+
+#loginBox{
+  margin-bottom: 1%;
+}
+
+.w3-button {
+  margin: 15px;
+}
+
+#dashboard_hamburger{
+  position: absolute;
+  left: 2%;
+  height: 60px;
+  width: 100px;
+  margin: 0px;
+  padding: 0px;
+  top: 4px;
+}
+
+#trackName, #subCat{
+  padding: 5px;
+  margin-bottom: 15px;
+  color: #005580;
+  width: 100%;
+}
+
+#logo{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-top: 5%
+}
+
+/* #myDashboard{
+  margin-bottom: 10%;
+} */
+
+#foodInput, #log, #register, #displayLogConfirmation,#logConfirmation{
+  width: 50%;
+  position: sticky;
+  left: 25%;
+}
+
+.w3-main, .main-content {
+  margin-bottom: 35%;
+}
+
+.index-header{
+  margin-top: 0px;
+  /* top:0;
+  width:100%;
+  position:fixed;
+  margin-bottom: 10%; */
+}
+#mySidebar {
+  /* height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0; */
+  overflow-x: hidden;
+}
+
+.w3-modal {
+  display:none;
+}
+
+#modalData {
+  width: 100%;
+}
+.w3-modal-content {
+width: 50%;
+}
+.modalBtn {
+  z-index: 10;
+}
+.index-main {
+  margin-bottom:35%;
+}
+
+footer {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+
 }
 
 /*espie stylesheets start here*/
