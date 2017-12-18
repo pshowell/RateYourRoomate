@@ -54,18 +54,15 @@ h1 {
 	/*text-shadow:  1px 1px 2px #000000;*/
 }
 
+/*//team//*/
 .team h1 {
 	text-align: center;
 	color: #17a2b8;
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
 }
-.welcome {
-	text-align: center;
-	color: #17a2b8;
-	font-family: 'Lobster', cursive;
-	font-size: 50px;
-}
+
+/*//testimonials//*/
 .testimonials h1 {
 	text-align: center;
 	color: #17a2b8;
@@ -80,6 +77,8 @@ h1 {
 .card.p-5 {
 	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/*//end testimonials//*/
 
 
 .jumbotron h1 {
@@ -166,6 +165,7 @@ body {
 	background-color: white;
 	padding-top: 0px;
 
+
 }
 #header {
    background:#ff0;
@@ -185,10 +185,13 @@ body, html {
 	background-image: url(/assets/img/brickwall.png);
 }
 
+<<<<<<< HEAD
 img {
 	display: block;
 	align-items: center;
 }
+=======
+>>>>>>> b080dc85c30455da18e83d84b2e96e150865f9a5
 
 .w3-panel {
   margin: 25px;
@@ -237,9 +240,7 @@ div#bloodhound {
   background-color: lightgray;
   text-align: center;
   margin: 0px;
-
 }
-
 
 #loginBox{
   margin-bottom: 1%;
@@ -272,8 +273,6 @@ div#bloodhound {
   width: 50px;
   margin-top: 5%
 }
-
-
 
 #foodInput, #log, #register, #displayLogConfirmation,#logConfirmation{
   width: 50%;
@@ -311,6 +310,15 @@ width: 50%;
   margin-bottom:35%;
 }
 
+h2.mb-3 {
+	text-align: center;
+	margin-top: 0%;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+
+}
+
 footer {
 	margin-right: auto;
 	margin-left: auto;
@@ -318,6 +326,17 @@ footer {
 	padding-right: 10px;
 
 }
+
+/*home.handlebars stylesheet starts here */
+
+.welcome {
+	text-align: center;
+	color: #17a2b8;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+}
+
+/*home.handlebars stylesheet ends here*/
 
 /*espie stylesheets start here*/
 
