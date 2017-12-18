@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Roommates = sequelize.define('Roommates', {
-        name: {
+        rmname: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
 
-        picture: {
+        rmpicture: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -26,18 +26,18 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        gender: {
+        rmgender: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        age: {
+        rmage: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        bio: {
+        rmbio: {
             type: DataTypes.STRING,
             allowNull: true,
         }

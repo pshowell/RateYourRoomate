@@ -8,9 +8,12 @@ module.exports = function (app) {
       var imgPath;
       var rmId = req.body.rmId;
 
-        if (req.files.roommatePicture) {
-          var roommatePicture = req.files.rmPicture;
-            imgPath = '/RoommateImages/' + userId + '_' + req.body.rmname + '.jpeg';
+
+        if (req.files.roommatePicture)
+            return res.status(400).send('No files were uploaded.');
+            var roommatePicture = req.files.roommatePicture;
+              var userId = req.user.rmId;
+            var imgPath = '/RoommateImages/' + rmId + '_' + req.body.rmname + '.jpeg';
 
           roommatePicture.mv(path.join(__dirname, '../public' + imgPath), function (err) {
                 if (err) {
@@ -42,7 +45,7 @@ module.exports = function (app) {
             return res.status(400).send('No files were uploaded');
         }
 
-        var roommatePicture = req.files.rmPicture;
+        var roommatePicture = req.files.rmpicture;
         var roommateId = req.body.rmId;
         console.log(rmId);
         var imgPath = '/RoommateImages/' + req.user.id + '_' + req.body.rmname + '.jpeg';
