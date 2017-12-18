@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Posts = sequelize.define('Posts', {
         body: {
-            type: DataTypes.TEXT,
+            type: DataTypes.TEXT('long'),
             allowNull: false,
             validate: {
                 len: [1]
