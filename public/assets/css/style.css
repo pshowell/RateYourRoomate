@@ -184,14 +184,13 @@ body, html {
   transition: background-color .5s;
 	background-image: url(/assets/img/brickwall.png);
 }
+/*
 
-<<<<<<< HEAD
 img {
 	display: block;
 	align-items: center;
 }
-=======
->>>>>>> b080dc85c30455da18e83d84b2e96e150865f9a5
+*/
 
 .w3-panel {
   margin: 25px;
@@ -443,7 +442,53 @@ label {
 	float: left;
 }
 
+
+
 .rounded {
 	display: block;
 	align-items: center;
+}
+
+/*//home.handlebars//*/
+#SubmitPost {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+}
+#DeletePost {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+
+}
+
+#UpdatePost {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+}
+
+/*//addroommate//*/
+button.btn.btn-primary.roommate-margin-b-sm.roommate-margin-l-sm {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+}
+
+#upload {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+}
+
+.btn.btn-success {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+}
+
+.btn.btn-danger {
+	border-color: #17a2b8;
+	color: #17a2b8;
+	background-color: white;
 }
