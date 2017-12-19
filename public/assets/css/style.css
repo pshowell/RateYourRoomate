@@ -492,3 +492,9 @@ button.btn.btn-primary.roommate-margin-b-sm.roommate-margin-l-sm {
 	color: #17a2b8;
 	background-color: white;
 }
+
+.btn.btn-primary {
+	border-color: #17a2b8;
+	color: white;
+	background-color: #17a2b8;
+}
