@@ -67,17 +67,18 @@
             <div class="modal-body">
                 <form ref='uploadForm' id='AddRoommate' action='/api/newroommateimg/upload' method='post' encType="multipart/form-data">
                     <div class="form-group">
-                        <label for="roommatePicture" class="col-form-label">Picture</label>
+                        <label for="roommatePicture" class="col-form-label">Picture:</label>
                         <input class="form-control" type="file" name="roommatePicture" />
+                        <br>
                           <button type="submit" class="btn btn-success" id="upload">Upload!</button>
                     </div>
                     <div class="form-group">
-                        <label for="name" class="col-form-label">Name</label>
+                        <label for="name" class="col-form-label">Name:</label>
                         <input class="form-control" type="text" name="name" />
                     </div>
                     <div class="form-row">
                         <div class="form-group col-6">
-                            <label for="rlocation" class="col-form-label">Roommate Location</label>
+                            <label for="rlocation" class="col-form-label">Roommate Location:</label>
                             <!-- <input class="form-control" type="text" name="rlocation" placeholder="Washington, DC" /> -->
 
                             <select name="rlocation" class="form-control">
@@ -93,19 +94,19 @@
                             </select>
 
                         </div>
-                        <div class="form-group col-6">
+                        <!-- <div class="form-group col-6">
                             <label for="withRoom" class="col-form-label">WithRoom</label>
                             <select name="withRoom" class="form-control">
                                 <option name="withRoom" selected>Select One</option>
                                 <option name="withRoom" value="Yes">Yes</option>
                                 <option name="withRoom" value="No">No</option>
                             </select>
-                            <!-- <input class="form-control" type="text" name="withRoom" placeholder="withRoom?" /> -->
-                        </div>
+                            <input class="form-control" type="text" name="withRoom" placeholder="withRoom?" />
+                        </div> -->
                     </div>
                     <div class="form-row">
                         <div class="form-group col-6">
-                            <label for="gender" class="col-form-label">Gender</label>
+                            <label for="gender" class="col-form-label">Gender:</label>
                             <select name="gender" class="form-control">
                                 <option name="gender" selected>Select One</option>
                                 <option name="gender" value="male">Male</option>
@@ -113,12 +114,12 @@
                             </select>
                         </div>
                         <div class="form-group col-6">
-                            <label for="age" class="col-form-label">Age</label>
+                            <label for="age" class="col-form-label">Age:</label>
                             <input class="form-control" name="age" type="number" />
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="bio">Bio</label>
+                        <label for="bio">Bio:</label>
                         <textarea class="form-control" name="bio" rows="3"></textarea>
                     </div>
                     <input type="hidden" name="userId" value="{{userId}}" />
