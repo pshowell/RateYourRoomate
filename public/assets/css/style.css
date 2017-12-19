@@ -367,7 +367,10 @@ footer {
 .card-header {
     padding: .5rem .75rem;
 }
-
+.card-body {
+	display: block;
+	text-align: center;
+}
 #Filters {
     margin-bottom: 20px;
 }
@@ -510,3 +513,14 @@ button.btn.btn-primary.roommate-margin-b-sm.roommate-margin-l-sm {
 	color: white;
 	background-color: #17a2b8;
 }
+
+/*------------------------------*/
+.star-rating {
+	text-align: center;
+	display: block;
+  line-height:32px;
+  font-size:1.25em;
+	align-items: center;
+}
+
+.star-rating .fa-star{color: yellow;}
