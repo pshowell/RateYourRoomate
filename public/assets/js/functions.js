@@ -143,7 +143,7 @@ $(document).ready(function () {
 
     });
 // delete function
-    $('#DeletePost').on('click', function (event) {
+    $('#DeletePost').on('click', function (handlePostDelete) {
         // event.preventDefault();
         // event.stopPropagation();
         var id = $(this).attr('data-id');
@@ -159,6 +159,25 @@ $(document).ready(function () {
             });
         }
     });
+      // $('#DeletePost').on("click", "button.delete", handlePostDelete);
+    // This function figures out which post we want to delete and then calls deletePost
+  function handlePostDelete() {
+    var currentPost = $(this)
+      .parent()
+      .parent()
+      .data("post");
+    deletePost(currentPost.id);
+  }
+  function deletePost(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/posts/" + id
+    })
+    .done(function() {
+      getPosts(postCategorySelect.val());
+    });
+  }
+
     // $('#UpdatePost').on('click', function (event) {
     //     event.preventDefault();
     //     event.stopPropagation();
