@@ -34,8 +34,8 @@ module.exports = function (app) {
             withRoom: req.body.withRoom,
             rmage: req.body.rmage,
             rmbio: req.body.rmbio
-        }).then(function () {
-            res.redirect('/profile/view-roommates');
+        }).then(function (data) {
+            res.redirect('/');
         });
 
     });
@@ -80,7 +80,7 @@ module.exports = function (app) {
             where: {
                 id: req.body.id
             }
-        }).then(function (dbRoommates) {
+        }).then(function (data) {
             res.redirect('/profile/view-roommates');
         });
     });
@@ -91,7 +91,7 @@ module.exports = function (app) {
             where: {
                 id: req.params.rmId
             }
-        }).then(function (dbRoommates) {
+        }).then(function (data) {
             res.send('deleted');
         });
     });
@@ -102,7 +102,7 @@ module.exports = function (app) {
             where: {
                 id: req.params.rmId * 1
             }
-        }).then(function (dbRoommates) {
+        }).then(function (data) {
             res.redirect('/profile/view-roommates');
         });
     });

@@ -24,18 +24,39 @@ module.exports = function(app){
             body: req.body.body,
             UserId: req.user.id
         }).then(function(data){
-            res.send('success');
+            res.send('/home');
         })
     });
 
     //delete current user's post
-    app.delete('/api/posts', function(req, res){
+    // app.delete('/api/posts', function(req, res){
+    //     models.Posts.destroy({
+    //         where: {
+    //             userId: req.user.id
+    //         }
+    //     }).then(function(data){
+    //         res.json(data);
+    //     });
+    // });
+    app.put('/api/update-post', function (req, res) {
+        models.Posts.update({
+
+            where: {
+                id: req.body.id
+            }
+        }).then(function (data) {
+            res.redirect('/home');
+        });
+    });
+
+    // Delete
+    app.delete('/api/delete-post/:id', function (req, res) {
         models.Posts.destroy({
             where: {
-              UserId: req.body.id
+                id: req.user.Id
             }
-        }).then(function(data){
-            res.send('success');
+        }).then(function (data) {
+            res.send('deleted');
         });
     });
 }

@@ -1,26 +1,47 @@
+{{> nav}}
+
+<main id="HomeMain">
+
+          <div class="background-image responsive"></div>
+               <div class="jumbotron">
+                    <h1>Find and Rate a Roommate!</h1>
+                    <h2>Never have a bad roommate experience again.</h2>
+
+
+                  </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            {{> profileSidebar}}
+        <div class="col-4">
+          {{> profileNav }}
+          {{> profileSidebar}}
         </div>
-        <div class="col-md-9">
-            {{> profileNav}}
-            <div class="row">
+        <div class="col-8">
+          <div class="welcome">
+            Welcome!
+          </div>
+
+            <div>
                 <div class="col">
-                    <h2  href="/roommates/{{id}}" class="text-left" style="display: inline-block">My Roommates</h2>
-                    <button type="button" class="btn btn-primary roommate-margin-b-sm roommate-margin-l-sm" data-toggle="modal" data-target="#add-roommate">Add a Roommate</button>
+                  <!-- espie commented -->
+                    <!-- <h2 class="text-left" style="display: inline-block">My Roommates</h2> -->
+
+                    <button type="button" class="btn btn-primary roommate-margin-b-sm roommate-margin-l-sm"
+                    data-toggle="modal" data-target="#add-roommate">Add a Roommate</button>
                 </div>
             </div>
+
+
+
             <div class="row">
                 {{#each roommates}}
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="card w-100">
-                        <a href="/roommates/{{id}}">
-                            <img class="card-img-top img-fluid" src="{{picture}}" alt="{{name}}" />
+                        <a href="/api/roommates/{{id}}">
+                            <img class="card-img-top img-fluid" src="{{rmpicture}}" alt="{{rmname}}" />
                         </a>
                         <div class="card-body">
-                            <h4 class="card-title text-center">{{name}}</h4>
-                            <a href="/api/roommate/{{id}}" class="btn btn-primary mb-1">View Profile</a>
+                            <h4 class="card-title text-center">{{rmname}}</h4>
+                            <a href="/api/roommates{{id}}" class="btn btn-primary mb-1">View Profile</a>
                             <button type="button" class="btn btn-info mb-1 edit-roommate" data-toggle="modal" data-target="#edit-roommate" data-id="{{id}}">Edit Profile</button>
                             <form>
                                 <a href="#" class="btn btn-danger delete-roommate" data-id="{{id}}">Delete Roommate</a>

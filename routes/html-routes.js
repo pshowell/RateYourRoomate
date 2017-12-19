@@ -63,7 +63,7 @@ module.exports = function (app) {
         if(req.isAuthenticated()) {
             models.Roommates.findOne({
                 where: {
-                    id: req.params.rmId
+                    id: req.params.id
                 },
                 include: [models.Users]
             }).then(data => {

@@ -13,10 +13,13 @@ module.exports = function (app, passport) {
     app.get('/home', function(req,res) {
           res.render("home")
       })
+    app.get('/profile/view-roommates', function(req,res) {
+              res.render("profile/view-roommates")
+        })
 
-    app.get('/roommates', function(req,res) {
-            res.render("roommates")
-      })
+    // app.get('/roommates', function(req,res) {
+    //         res.render("roommates")
+      // })
     app.get('/roommate', function(req,res) {
                   res.render("roommate")
 

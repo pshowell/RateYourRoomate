@@ -63,6 +63,30 @@ module.exports = function (app) {
         }
     });
 
+    app.get('/', function (req, res) {
+        if(req.isAuthenticated()) {
+            models.Users.findOne({
+                where: {
+                    id: req.user.id
+                },
+                include: [models.Roommates]
+            }).then(data => {
+                res.render('profile/view-roommates', {
+                    rmpicture: data.rmpicture,
+                    rmname: req.body.rmname,
+                    Rlocation: req.body.rlocation,
+                    WithRoom: req.body.withRoom,
+                    rmage: req.body.rmage,
+                    rmgender:req.body.rmgender,
+                    rmbio: req.body.rmb
+                    // isUser: req.isAuthenticated()
+                });
+            });
+        }else{
+            res.redirect('/');
+        }
+    });
+
     //Get user's friends (no data)
     app.get('/profile/view-friends', function (req, res) {
         if(req.isAuthenticated()) {

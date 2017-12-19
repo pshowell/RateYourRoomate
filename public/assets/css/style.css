@@ -185,13 +185,12 @@ body, html {
 	background-image: url(/assets/img/brickwall.png);
 }
 
-<<<<<<< HEAD
 img {
 	display: block;
 	align-items: center;
 }
 =======
->>>>>>> b080dc85c30455da18e83d84b2e96e150865f9a5
+
 
 .w3-panel {
   margin: 25px;
@@ -430,6 +429,13 @@ footer {
         height: 300px;
     }
 }
+/*working on the profile pic*/
+.img-fluid {
+    max-width: 70%;
+    height: auto;
+}
+/*end of profile pic*/
+
 /*espie stylesheets ends here*/
 .form-group {
 	padding-left: 4px;

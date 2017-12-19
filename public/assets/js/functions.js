@@ -36,9 +36,9 @@ $(document).ready(function () {
                         class: 'card float-right'
                     });
                     var $cardImage = $('<img>', {
-                        src: data[roommate].picture,
+                        src: data[roommate].rmpicture,
                         class: 'card-img-top',
-                        alt: data[roommate].name
+                        alt: data[roommate].rmname
                     });
                     var $cardBody = $('<div>', {
                         class: 'card-body'
@@ -52,7 +52,7 @@ $(document).ready(function () {
                         class: 'friendRoommateId',
                         value: $('#FriendRoommatetId').val()
                     });
-                    var $myPetId = $('<input>', {
+                    var $myRoomateId = $('<input>', {
                         type: 'hidden',
                         name: 'myRoommateId',
                         class: 'myRoommateId',
@@ -69,7 +69,7 @@ $(document).ready(function () {
                     $card.append($cardImage);
                     $card.append($cardBody);
                     $cardBody.append($cardTitle);
-                    $cardTitle.html(data[roommate].name);
+                    $cardTitle.html(data[roommate].rmname);
                     $cardBody.append($friendRoommateId);
                     $cardBody.append($myRoommateId);
                     $cardBody.append($makeFriendship);
@@ -128,6 +128,7 @@ $(document).ready(function () {
                 class: 'card-footer bg-transparent'
             });
 
+
             $card.append($cardBody);
             $cardBody.append($cardText);
             $card.append($cardFooter);
@@ -140,7 +141,43 @@ $(document).ready(function () {
         });
 
     });
-    
+// delete function
+    $('#DeletePost').on('click', function (event) {
+        // event.preventDefault();
+        // event.stopPropagation();
+        var id = $(this).attr('data-id');
+
+        var deletePost = confirm('Are you sure you want to delete your post?');
+
+        if (deletePost) {
+            $.ajax({
+                method: 'DELETE',
+                url: '/api/delete-post/' + id
+            }).done(function (response) {
+                location.reload();
+            });
+        }
+    });
+    // $('#UpdatePost').on('click', function (event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     var id = $(this).attr('data-id');
+    //     //
+    //     var deletePost = confirm('Are you sure you want to delete your post?');
+    //
+    //     if (updatePost) {
+    //         $.ajax({
+    //             method: 'UPDATE',
+    //             url: '/api/update-post/' + id
+    //         }).done(function (response) {
+    //             location.reload();
+    //         });
+    //     }
+    // });
+
+
+// end espie's edit
+
     $('.delete-roommate').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -163,12 +200,14 @@ $(document).ready(function () {
             $(".roommate-data").remove();
             $('#edit-roommate-form').append('<input type="hidden" class="roommate-data" name="id" value="' + data.id + '" />');
             $('#UpdateRoommateImg-form').append('<input type="hidden" class="roommate-data" name="id" value="' + data.id + '" />');
-            $('#UpdateRoommateImg-form').append('<input type="hidden" class="roommate-data" name="name" value="' + data.name + '" />');
-            $('#roommate-name').val(data.name);
+            $('#UpdateRoommateImg-form').append('<input type="hidden" class="roommate-data" name="name" value="' + data.rmname + '" />');
+            $('#roommate-rmname').val(data.rmname);
+            $('#roommate-rmpicture').val(data.rmpicture);
             $('#roommate-rlocation').val(data.rlocation);
             $('#roommate-withRoom').val(data.withRoom);
-            $('#roommate-age').val(data.age);
-            $('#roommate-bio').val(data.bio);
+            $('#roommate-rmage').val(data.rmage);
+            $('#roommate-rmbio').val(data.rmbio);
+
         });
     }
 
