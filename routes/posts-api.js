@@ -59,4 +59,16 @@ module.exports = function(app){
             res.send('deleted');
         });
     });
+//update user's post
+    app.put("/api/posts", function(req, res) {
+    models.Posts.update(
+      req.body,
+      {
+        where: {
+          UserId: req.body.id
+        }
+      }).then(function(data) {
+        res.send('success');
+      });
+  });
 }
