@@ -128,7 +128,8 @@ $(document).ready(function () {
                 class: 'card-footer bg-transparent'
             });
 
-
+            //create a property "data-id"
+            //that stores the id of the post in the api response.
             $card.append($cardBody);
             $cardBody.append($cardText);
             $card.append($cardFooter);

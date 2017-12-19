@@ -24,6 +24,9 @@ module.exports = function(app){
             body: req.body.body,
             UserId: req.user.id
         }).then(function(data){
+          //res.send an object with ->
+          //id of post
+          //redirect?
             res.send('/home');
         })
     });
@@ -51,9 +54,10 @@ module.exports = function(app){
 
     // Delete
     app.delete('/api/delete-post/:id', function (req, res) {
+      console.log(req.params.id);
         models.Posts.destroy({
             where: {
-                id: req.user.Id
+                id: req.params.id
             }
         }).then(function (data) {
             res.send('deleted');
